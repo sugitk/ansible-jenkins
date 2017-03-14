@@ -5,6 +5,9 @@
 - name: rpm repo
   copy: src=repo dest=/etc/yum.repos.d/jenkins.repo
 
+- name: sudoers
+  copy: src=jenkins dest=/etc/sudoers.d/jenkins mode=600
+
 - name: install openjdk8
   yum: name=java-1.8.0-openjdk state=latest
 
