@@ -1,0 +1,13 @@
+---
+- name: Install libselinux-python
+  yum: name=libselinux-python
+
+- name: rpm repo
+  copy: src=repo dest=/etc/yum.repos.d/jenkins.repo
+
+- name: install openjdk8
+  yum: name=java-1.8.0-openjdk state=latest
+
+- name: install jenkins
+  yum: name=jenkins state=latest
+  notify: restart jenkins
