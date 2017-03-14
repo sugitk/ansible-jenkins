@@ -20,7 +20,7 @@ set up Jenkins
 ### change hosts file
 
 ```
-[server]
+[jenkins]
 192.168.1.20
 ```
 
